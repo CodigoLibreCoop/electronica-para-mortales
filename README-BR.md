@@ -90,7 +90,7 @@ Bibliotecas: ESP32Servo e BluetoothSerial
 
 Para enviar comandos Bluetooth pelo Android: Serial Bluetooth Terminal (Play Store)
 
-Para simular circuitos: [https://wokwi.com/](https://wokwi.com/)
+Para simular circuitos: [Wokwi](https://wokwi.com/)
 
 ### Licença
 
@@ -100,7 +100,7 @@ Livre para usar, modificar e experimentar.
 
 ### Autor
 
-Lucma ([https://www.youtube.com/@SoyLucma](https://www.youtube.com/@SoyLucma))
+Lucma [Canal do YouTube](https://www.youtube.com/@SoyLucma)
 
 Conteúdo sobre:
 
