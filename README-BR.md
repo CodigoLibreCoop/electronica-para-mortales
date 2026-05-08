@@ -1,5 +1,7 @@
 # Eletrônica para Mortais 🤖💡
 
+Ver README en español: [aquí](README.md)
+
 Este repositório contém exemplos simples e escaláveis para projetos de robótica, automação e interação sem fio usando ESP32.
 
 ---
