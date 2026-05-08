@@ -49,7 +49,7 @@ Brazo robótico controlado mediante Bluetooth usando servomotores MG996R y ESP32
 - 3x MG996R (tambien sirven los MG996)
 - Fuente externa 5V (o una fuente ATX)
 - Jumpers
-- Estructura del brazo robótico (Link del modelo usado: )
+- Estructura del brazo robótico ([Link del modelo usado](https://www.instructables.com/EEZYbotARM-Mk2-3D-Printed-Robot/) )
 
 ### Pines utilizados
 | Servo | GPIO |
