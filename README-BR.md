@@ -8,7 +8,7 @@ Este repositório contém exemplos simples e escaláveis para projetos de robót
 
 # Projetos incluídos
 
-## Bluetooth LED Control | pasta led/
+## LED controlado por Bluetooth | pasta led/
 
 Controle de um LED conectado ao GPIO 33 do ESP32 via Bluetooth Serial.
 
@@ -35,7 +35,7 @@ Controle de um LED conectado ao GPIO 33 do ESP32 via Bluetooth Serial.
 
 ---
 
-## 🦾 Bluetooth Robot Arm | pasta brazo
+## 🦾 Braço robótico controlado por Bluetooth | pasta brazo
 
 Braço robótico controlado via Bluetooth usando servomotores MG996R e ESP32.
 
