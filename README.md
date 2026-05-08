@@ -1,6 +1,8 @@
 
 # Electronica para Mortales 🤖💡
 
+Veja a documentação [aqui](README-BR.md)   
+
 Este repositorio contiene ejemplos simples y escalables para proyectos de robótica, automatización e interacción inalámbrica usando ESP32.
 
 ---
@@ -82,7 +84,7 @@ Librerias: ESP32Servo y BluetoothSerial
 ### Apps recomendadas
 
 Para enviar comandos Bluetooth desde Android: Serial Bluetooth Terminal (Play Store)
-Para simular circuitos: https://wokwi.com/
+Para simular circuitos: [Wokwi](https://wokwi.com/)
 
 ### Licencia
 
@@ -92,7 +94,7 @@ Libre para usar, modificar y experimentar.
 
 ### Autor
 
-@lucmadev (https://www.youtube.com/@SoyLucma)
+@lucmadev | [Canal de Youtube](https://www.youtube.com/@SoyLucma)
 
 Contenido sobre:
 
