@@ -1,27 +1,22 @@
 #include <BluetoothSerial.h>
-#include <ESP32Servo.h>
 
 BluetoothSerial SerialBT;
 
-Servo baseServo;
-Servo arm1Servo;
-Servo arm2Servo;
-
-int baseAngle = 90;
+// Pin del LED
+#define LED_PIN 33
 
 void setup() {
 
   Serial.begin(115200);
 
-  SerialBT.begin("RobotArm-ESP32");
+  // Inicializa Bluetooth
+  SerialBT.begin("LED-ESP32");
 
-  baseServo.attach(13);
-  arm1Servo.attach(12);
-  arm2Servo.attach(14);
+  // Configura el pin del LED como salida
+  pinMode(LED_PIN, OUTPUT);
 
-  baseServo.write(baseAngle);
-  //arm1Servo.write(90);
-  //arm2Servo.write(90);
+  // LED apagado al iniciar
+  digitalWrite(LED_PIN, LOW);
 
   Serial.println("Bluetooth Ready");
 }
@@ -31,46 +26,26 @@ void loop() {
   if (SerialBT.available()) {
 
     String cmd = SerialBT.readStringUntil('\n');
-
     cmd.trim();
 
     Serial.println("Received: " + cmd);
 
-    if (cmd.startsWith("A")) {
+    // Apagar LED
+    if (cmd == "0") {
 
-      int angle = cmd.substring(1).toInt();
+      Serial.println("Apagando LED");
+      digitalWrite(LED_PIN, LOW);
 
-      angle = constrain(angle, 0, 0); // Se deben configurar segun el motor utilizado
-
-      arm1Servo.write(angle);
     }
 
-    else if (cmd.startsWith("B")) {
+    // Encender LED
+    else if (cmd == "1") {
 
-      int angle = cmd.substring(1).toInt();
+      Serial.println("Encendiendo LED");
+      digitalWrite(LED_PIN, HIGH);
 
-      angle = constrain(angle, 0, 0); // Se deben configurar segun el motor utilizado
-
-      arm2Servo.write(angle);
     }
 
-    else if (cmd == "L") {
-
-      baseAngle -= 10;
-
-      baseAngle = constrain(baseAngle, 100, 180);
-
-      baseServo.write(baseAngle);
-    }
-
-    else if (cmd == "R") {
-
-      baseAngle += 10;
-
-      baseAngle = constrain(baseAngle, 100, 180); // Se deben configurar segun el motor utilizado
-
-      baseServo.write(baseAngle);
-    }
   }
 
   delay(20);
